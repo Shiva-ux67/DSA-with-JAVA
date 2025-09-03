@@ -5,26 +5,20 @@ public class PrimeNumber {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int num = sc.nextInt();
-        boolean isPrime = true;
-
+        int c = 2;
         if (num <= 1) {
-            isPrime = false; // 0 and 1 are not prime numbers
+            System.out.println("Not a prime number");
+
         } else {
-            for (int i = 2; i <= num / 2; i++) {
-                if (num % i == 0) {
-                    isPrime = false; // divisible by another number
-                    break; // no need to check further
+            while (num >= c*c) {
+                if (num % c == 0) {
+                    System.out.println(" not  a prime number");
+                    return;
                 }
+                c += 1;
             }
+            System.out.println(" it is a prime number");
         }
-
-        if (isPrime) {
-            System.out.println(num + " is a Prime Number.");
-        } else {
-            System.out.println(num + " is NOT a Prime Number.");
-        }
-
         sc.close();
     }
 }
-
