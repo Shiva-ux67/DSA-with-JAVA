@@ -15,7 +15,7 @@ public class NtoOne {
 
 //Using the Recursion 
     public static void main(String[] args) {
-        int n = 20;
+        int n = 10;
         get(n);
     }
     static void get(int n){
@@ -23,8 +23,11 @@ public class NtoOne {
         if(n == 0){
             return;
         }
-
-        System.out.print(n+" ");
+        // this one for N to One 
+        //System.out.print(n+" ");
         get(n - 1);
+        // this one is for One to N
+        // working the using the Stack Last In First Out
+        System.out.print(n+" ");
     }
 }
