@@ -9,7 +9,7 @@ public class Concept {
 
             return;
         }
-        System.out.println(n);
+        System.out.print(n+" ");
         //fun(n--); // it will give the StackOverflowError this line is the 5 only
         fun(--n); // it is gives the result  5 4 3 2 1
 
