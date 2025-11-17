@@ -1,21 +1,6 @@
 package Recursion;
 
-public class Reverse {
-    public static void main(String[] args) {
-//        int n = 1010111;
-//        fun(n);
-//        System.out.println(revers);
-        System.out.println(rev2(1));
-    }
-    static int revers = 0;
-    static void fun(int n){
-        if (n == 0){
-            return;
-        }
-        int rem = n % 10;
-        revers = revers * 10 + rem;
-        fun(n / 10);
-    }
+public class pallindrome {
     static int rev2(int n){
         int digits = (int)(Math.log10(n) + 1);
         return helper(n,digits);
@@ -30,5 +15,9 @@ public class Reverse {
     }
     static boolean  pallin(int n){
         return n == rev2(n);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(pallin(23432));
     }
 }

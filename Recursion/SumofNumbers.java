@@ -4,7 +4,7 @@ public class SumofNumbers {
     public static void main(String[] args) {
         int n = 5;
         int ans = sum(n);
-        System.out.println(ans);
+        System.out.println("The sum of the N Natural numbers: "+ans);
     }
     public static int sum(int n){
         // Base Case
