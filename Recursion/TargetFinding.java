@@ -4,13 +4,14 @@ import java.util.ArrayList;
 
 public class TargetFinding {
     public static void main(String[] args) {
-        int[] arr = {7,45,43,5,5,24,23};
-        int target = 5;
-        System.out.println(Search(arr,target,0));
-        System.out.println(SearchInd(arr,target,0));
-        SearchAllInd(arr,target,0);
-        System.out.println(list);
-        System.out.println(SearchAllIndnew(arr,target,0,new ArrayList<>()));
+        int[] arr = {1,2,3,4,4,5};
+        int target = 4;
+//        System.out.println(Search(arr,target,0));
+//        System.out.println(SearchInd(arr,target,0));
+//        SearchAllInd(arr,target,0);
+//        System.out.println(list);
+//        System.out.println(SearchAllIndnew(arr,target,0,new ArrayList<>()));
+        System.out.println(SearchAllIndnew2(arr,target,0));
     }
 
     static boolean Search(int[] arr, int target, int index) {
@@ -51,5 +52,17 @@ public class TargetFinding {
             list.add(index);
         }
         return SearchAllIndnew(arr,target,index + 1,list);
+    }
+    static ArrayList<Integer> SearchAllIndnew2(int[] arr, int target, int index ) {
+        ArrayList<Integer> list = new ArrayList<>();
+        if(index == arr.length - 1){
+            return list;
+        }
+        if(arr[index] == target){
+            list.add(index);
+        }
+        ArrayList<Integer> abc = SearchAllIndnew2(arr,target,index + 1);
+        list.addAll(abc);
+        return list;
     }
 }

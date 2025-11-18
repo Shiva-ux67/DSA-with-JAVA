@@ -47,6 +47,6 @@ I update this repo daily as part of my learning journey.
 - Searching (Linear, Binary, Infinite array search)  
 - Sorting (Bubble, Selection, Insertion, Merge Sort, Quick Sort)  
 - OOPs (Inheritance, Polymorphism, Encapsulation, Abstraction)  
-- Stack, Queue, LinkedList  
+- Stack, Queue, ArrayList  
 - LeetCode Solved Problems  
 

@@ -11,6 +11,7 @@ public class RotatedBS {
         if(pivot == -1){
             return Bsearch(nums,target,0,nums.length - 1);
         }
+        return -1;
     }
 
     static int Bsearch(int[] arr,int k, int low,int high){
