@@ -4,14 +4,18 @@ public class RotateArray {
         int[] nums = {1, 2, 3, 4, 5};
         int k = 3;
         int n = nums.length;
-        while (k > 0)
-        {
-            for (int i = 0; i <= n; i++) 
-            {
-                nums[i] = nums[n-1-i];
-            }
-            k--;
+        if (n == 0) return;
+        k = k % n;
+        reverse(nums, 0, n - 1);
+        reverse(nums, 0, k - 1);
+        reverse(nums, k, n - 1);
+        System.out.println("Rotated Array: " + Arrays.toString(nums));
+    }
+    static void reverse(int[] arr, int left, int right) {
+        while (left < right) {
+            int t = arr[left];
+            arr[left++] = arr[right];
+            arr[right--] = t;
         }
-        System.out.print("Rotated Array: " + nums);
     }
 }
